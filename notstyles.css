@@ -1,0 +1,83 @@
+/* THIS FILE NOT THE ONE THAT WILL BE LINKED TO THE .html FILE .. JUST FOR STUDYING */
+/* -------------------------------------------------------------------------------- */
+/*     notstyles.css      */
+
+/* color property  */
+/*  
+    It sets the color of element's text color
+    You can use color = red  // for example
+    or rgb or shl or hex to represent a specific color
+    As follows
+*/
+
+p{
+    /* hex example: */
+    color: #1100ff;
+
+    /* rgb example */
+    color: rgb(0, 50, 100);
+    /* values range from 0 to 255  red, green, and blue respectively */
+    /* shl */
+    color: hsl(15, 70%, 40%);
+
+    /* or simple the name of the color */
+    color:red;
+    
+
+    color:rgba(255, 0, 0, 0.7)
+    /* The forth value represents the opacity 0.0 means fully transparent - and 1.0 means fully opaque  */
+}
+
+/* =================== NOTE every property must end with semicolon ============ */
+
+
+#title
+{
+    background-color: red;
+}
+
+.alert-text{
+    color: white;
+}
+
+.read, .unread{
+    color: white;
+    background-color: black;
+}
+
+
+.unread{
+    color: white;
+    background-color: black;
+}
+
+.subsection.header
+{
+    color: red;
+    /* 
+        You can include more than font family to avoid the case when the browser doesn't include 
+        the first font
+    */
+    font-family: "Times New Roman", sans-serif;
+    font-size: 22px;   /*  there is no white space between "22" and "px" */
+    font-weight: 500;   /*   This property specifies the boldness of the text. It ranges from 100 to 900 */
+    font-weight: bold;    /* this property can take "bold" as a value. It's equivalent to 700 */
+    
+    text-align: center;
+    /* this property specifies the position of the text  "center",  "end", "left", "right:" , etc */
+   
+    
+}
+
+.subsection#preview{
+    color: blue;
+}
+
+.ancestor.contents{
+    background-color: brown;
+}
+
+img{
+    height: auto;  /*  It's better to set one of dimensions "auto", to keep the ratio between height and width as it*/
+    width: 500px;
+}

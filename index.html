@@ -20,9 +20,27 @@
                  if many projects is open
             -->
         </title>
-
-    </head>
         
+        <!-- This line links the html file to an external .css file -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- rel attribute specifies the relation between the html file and the css -->
+        <!-- href attribute specifies the URL or the path of the css file -->
+
+
+        <!-- Another way to add styles to html is the (internal or embedded css) -->
+        <!-- within the html file itself ... by adding  <style> element in the head of the html  -->
+        <style>
+            div{
+                color: white;
+                background-color: black;
+            }
+
+            p{
+                color: red;
+            }
+        </style>
+    </head>
+     
     <body>
        <!-- the p element is used to add a paragraph -->
         <p>
@@ -98,6 +116,50 @@
         
         <!-- 2- By adding the link to the webpage containing this image -->
         <img src="https://i.imgur.com/nySVRaa.jpg" alt="Bahgat Saber">
+
+        <div style="color:red; background-color:grey;">This line has an "Inline" css</div>
+
+        <div class="ancestor">      <!-- A -->>
+            <div class="contents">      <!-- B -->
+                <div class="contens">       <!-- C -->
+                    sdjkaljf;alksdjf
+                </div>
+            </div>
+        </div>
+        
+        <div class="contents">
+            alsd
+        </div>
+
+
+        <div>Hello, World!</div>
+        <div>Hello, again!</div>
+        <p>Hi!</p>
+        <div>Bye.</div>
+
+        <div class="alert-text">
+            Please agree to our terms of service.
+        </div>
+        
+        <div id="title">My Awesome 90's Page</div>
+        
+        <div>
+            <div class="subsection header">
+                Latest Posts
+            </div>
+            <div class="subsection preview">
+                This is where a preview for a post might go.
+            </div>
+        </div>
+        
+        
+        <div>
+            <div class="subsection header">Latest Posts</div>
+            <p class="subsection" id="preview">This is where a preview for a post might go.</p>
+        </div>
+        
+        
+        
 
     </body>
 </html>
