@@ -1,0 +1,22 @@
+.one {
+    width: 300px;
+    height: 100px;
+    padding: 44px;
+    border: 10px solid blue;
+
+    box-sizing: border-box;
+    /* 
+        This style makes the width and height set above is considered for 
+        the whole box including padding and borders 
+        and the content size will subtracted from borders and padding
+    */
+    
+  }
+  
+  #two {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+    /* box-sizing: border-box; */
+  }

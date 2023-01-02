@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    font-size: 90px;
+    margin: 10px;
+    border: 10px solid  rgb(173, 142, 142);
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+}
+
+
+/*
+     Note that if we have the same styling type on the same element 
+     the one that applied on the element is the more specific one 
+     as * refers to general (all)_ the elements 
+     The style using Id will be applied not the general one
+*/
+/* 
+#one{
+    font-size: 50;
+    background-color: yellow;
+    margin:40px;
+    border: 10px green;
+} */
+
+.one{
+    font-size: 50px;
+    background-color: rgb(255, 98, 98);
+    /* width: 400px;
+    height: 50px; */
+
+    padding: 60px;
+    border: 10px solid yellow;
+    box-sizing: border-box;
+    
+
+
+}
+#two{
+    font-size: 45px;
+    /* width: 400px;
+    height: 50px; */
+
+    box-sizing: border-box;
+    
+    background-color: rgb(84, 84, 255);
+    padding: 100px;  /* The empty area inside the box */
+    border: 5px solid black;  /* The width of borers of the box */
+    margin: 40px;  /* The empty space between the box and any other boxes */
+
+
+    /* 
+        By default, the width and height of an element is calculated like this:
+        width + padding + border = actual width of an element
+        height + padding + border = actual height of an element
+
+
+    */
+}
+
+
