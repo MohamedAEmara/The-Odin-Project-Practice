@@ -1,0 +1,22 @@
+p,
+ul {
+    border: 10px solid green;
+    padding: 0.5em;
+}
+
+.block,
+li {
+    border: 2px solid red;
+    padding: 0.5em;
+}
+
+
+ul {
+    display: flex;    /*  display : flex will make the list elements next to each others*/
+   
+    list-style: none;
+}
+
+.block {
+    display: block;
+}

@@ -1,0 +1,23 @@
+p, 
+ul {
+  border: 2px solid green;
+}
+
+span,
+li {
+  border: 2px solid red;
+}
+
+ul {
+  display: flex;          /* puts the elements of the list next to each other but with a new line after */
+  display: inline-flex;        /* puts the elements of the list next to each other but don't go to next line after 
+                             but if the window gets smaller the elements separate each in single line
+                          */
+  list-style: none;      
+  padding: 0;
+} 
+
+.inline {
+  display: inline-flex;  
+}
+   
