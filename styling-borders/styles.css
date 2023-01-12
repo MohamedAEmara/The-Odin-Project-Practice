@@ -1,0 +1,10 @@
+p{
+    font-size: 50px;
+    border-top: 6px double brown;
+    border-left: 5px dotted cyan;
+    border-right: 5px dotted cyan;
+    border-bottom: 6px dashed brown;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}

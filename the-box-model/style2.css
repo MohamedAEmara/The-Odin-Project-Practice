@@ -1,5 +1,10 @@
+html{
+  box-sizing: border-box;
+}
+
 p, 
 ul {
+ 
   border: 2px solid green;
 }
 

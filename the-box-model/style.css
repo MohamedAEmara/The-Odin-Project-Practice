@@ -1,3 +1,4 @@
+
 p,
 ul {
     border: 10px solid green;
@@ -6,6 +7,9 @@ ul {
 
 .block,
 li {
+    /* box-sizing: border-box; */
+    width: 50px;
+    height: 25px;
     border: 2px solid red;
     padding: 0.5em;
 }

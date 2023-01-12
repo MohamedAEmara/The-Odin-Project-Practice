@@ -1,0 +1,98 @@
+.box{
+    font-size: 50px;
+    color: black;
+    background-color: rgb(212, 206, 206);
+    padding: 5px;
+    /* border: 2px solid green; */
+    margin: 20px;
+    width: 750px;
+    height: 250px;
+}
+
+
+/* If I don't select any box-sizing ---> the default is "contenet-box"   ---> in this case, the height and width will be applied on only content box  */
+/* Defula ---> Same as don't unset it */
+.one{
+    box-sizing: content-box;
+}
+
+/* But if we want to consider the width and height for the content with padding and borders */
+/* We have to set box-sizing to "border-box" */
+.two{
+    box-sizing: border-box; 
+    
+}
+
+
+
+/*
+    All these properties (margin, border, padding has shorthands to set all four sides
+    with the same value...
+    But if we need to set all side separately,
+    We have to use for exmaple:
+        margin-left
+        margin-right
+        margin-top
+        margin-bottom
+
+*/
+
+
+.three{
+    margin-top: 100px;
+    margin-left: 200px;
+
+    /* border-top: 10px;
+    border-right: 20px;
+    border-bottom: 40px;
+    border-left: 80px; */
+    padding-left: 300px;
+    padding-right: 50px;
+    padding-top: 100px;
+    /* border-color: red; */
+    border-left: 10px solid white;
+    border-right: 20px solid white;
+    border-top: 40px solid red;
+    border-bottom: 80px solid black;
+    background-color: lightcyan;
+    border-left-color: white;
+    border-right-color: gray;
+    border-top-color: red;
+    border-bottom-color: black;
+
+}
+
+
+div{
+    font-size: 50px;
+    background-color: cyan;
+}
+
+
+.outer{
+    padding: 20px;
+    margin-top: 20;
+    border: 10px solid red;
+}
+
+.inner{
+    padding: 40px;
+    background-color: gray;
+
+
+    /* Two elements can be overlapped if the margin has a negative value */
+    margin-top: -50px;   
+    
+    
+    border: 5px solid black;
+}
+
+
+/* -------------- KEEP IN MIND ------------- */
+/*
+    Depending on whether two elements whose margins touch have positive or negative margins, the results will be different:
+
+        -Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.
+        -Two negative margins will collapse and the smallest (furthest from zero) value will be used.
+        -If one margin is negative, its value will be subtracted from the total.
+ */
