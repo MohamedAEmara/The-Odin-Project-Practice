@@ -65,7 +65,7 @@
 
 div{
     font-size: 50px;
-    background-color: cyan;
+    background-color: red;
 }
 
 
@@ -96,3 +96,75 @@ div{
         -Two negative margins will collapse and the smallest (furthest from zero) value will be used.
         -If one margin is negative, its value will be subtracted from the total.
  */
+
+
+
+
+ /* Anothe way to set the margins  */
+ div{
+    margin: 100px 200px 100px 200px;
+
+    /* This line is the same as these four  */
+
+    margin-top: 100px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+
+
+    /* Any missing of the four values will be automatiaclly assumed  */
+    /* margin: 100px 200px;     --- the same as --->  margin: 100px 200px 100px 200px */
+
+    /* If there is only one value ---> all four values will be set to that value */
+}
+
+
+h1{
+    font-size: 60px;
+    background-color: cyan;
+    
+    width: 900px;
+    margin: 0 auto;
+    /* height: 100px; */
+}
+
+
+/* Line 1 and 2 has common margin (bottom of line 1  and  top of line 2) */
+/* When both margins have different values ---> the greater margin will be applied  */
+
+/* In this example the margin applied between the two lines is 50px --> max(50, 30)   */
+.line1{
+    font-size: 50px;
+    background-color: aquamarine;
+    margin: 0 0 50px 0;
+}
+
+
+.line2{
+    font-size: 50px;
+    background-color: aquamarine;
+    margin: 30px 0 0 0;
+}
+
+
+h3{
+    font-size: 50px;
+    background-color: bisque;
+    display: inline;
+    width: 50%;
+}
+
+
+/* Note that left and right margins  */
+.left{
+    margin-right:120px;
+}
+
+.right{
+    margin-left: 120px;
+}
+
+h2{
+    display: flex;
+    /* width: 50%; */
+}
