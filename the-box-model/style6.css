@@ -1,0 +1,17 @@
+div{
+    font-size: 25px;
+    background-color: rgb(245, 216, 216);
+    border: 2px dashed red;
+}
+
+.box{
+    /* display: inline; */
+    display: inline-block;
+    /* display: block; */
+    background-color: cyan;
+    border: 2px dashed blue;
+    margin: 15px;
+    padding: 40px;
+   
+}
+

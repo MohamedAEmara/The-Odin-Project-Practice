@@ -1,0 +1,23 @@
+body{
+    width: 500px;
+    margin: 0 auto;
+    /* This attribute centers the box  */
+}
+
+p{
+    font-size: 20px;
+    background-color: cyan;
+    border: 2px solid navy;
+}
+
+
+span{
+    display: inline-block; 
+    /* 
+        inline-block ---> means that the element will be applied in the same line beside other elements
+        Except when it needs extra spaces than the remaining space in the line --> in this case
+        it will be in the next line 
+    */
+    background-color: white;
+    border: 1px solid black;
+}

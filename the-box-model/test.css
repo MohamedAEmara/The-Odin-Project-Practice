@@ -1,0 +1,15 @@
+span{
+    display: inline;
+    
+    font-size: 30px;
+    background-color: skyblue;
+    border: 2px solid navy;
+}
+
+
+p{
+    display: inline;
+    font-size: 30px;
+    background-color: navajowhite;
+    border: 2px solid red;
+}
