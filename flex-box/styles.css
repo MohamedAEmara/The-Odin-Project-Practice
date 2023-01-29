@@ -1,0 +1,94 @@
+
+/*
+
+    A flex container is any element that has display: flex on it.
+    A flex item is any element that lives directly inside of a flex container.
+
+*/
+
+.flex-container{
+    display: flex;
+    /* display: flex will arrange elements horizontally alongside */
+    /* And everything will flex to fit within the available area */
+
+    /* As in the html file ---> all divs don't have any content and the padding 
+    haven't been set, the badding area is none "Only borders will be displayed" */
+
+    /* If we add any other element in the html file ---> it will be alongside by them */
+}
+
+
+.test{
+    display: flex;
+
+    /*
+        Although the second div "class test" has the same display "flex"
+        it displays in a wider space ---> as it contains content 
+    */
+}
+
+
+.flex-container div{
+    background-color: peachpuff;
+    border: 3px solid brown;
+    height: 100px;
+
+}
+
+
+.test div{
+    background-color: peachpuff;
+    border: 3px solid brown;
+    height: 100px;
+
+    /*
+        if we add some margin or changed any value of the box (width, height, border, margin, padding
+        this will affects the width or the height of the boxes
+    */
+    margin: 2px;
+}
+
+
+
+
+.menu{
+    border: 1px solid #fff;
+    display: flex;
+    background-color: white;
+    height: 30px;
+    margin-top: 30px;
+    
+    /* to distribute the space between the flex item */
+    /* The first and the last one will be at the two far ends of the page */
+    justify-content: space-between;
+
+    /* to make the space between each flex item and another .. and between the two far ends */
+    /* and the edges of the page distributed equally */
+    justify-content: space-around;
+
+
+    /* to arrange flex elements alongside at the right of the page */
+    justify-content: flex-end;  
+
+
+    /* To arrange flex elements alongside at the left of the page */
+    justify-content: flex-start;
+
+
+    /* To arrange flex elements alngside at the center of the page */
+    /* But with no extra spaces between them */
+    justify-content: center;
+}
+
+.date, .login, .signup{
+    background-color: gray;
+    /* display: flex; */
+    width: 200px;
+    /* justify-content: space-between; */
+}
+/* .date .signup .login{
+    background-color: gray;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+} */
