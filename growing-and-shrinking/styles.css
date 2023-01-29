@@ -1,0 +1,53 @@
+.container{
+    font-size: 30px;
+    border: 2px solid rebeccapurple;
+    background-color: gray;
+    /* display: inline; */
+    padding: 10px;
+    display: flex;
+    /* justify-content: space-around;
+    justify-content: space-between; */
+
+}
+
+
+.container > div{  /* Apply this to all div elements that are descendents of class container*/ 
+    flex: 1; 
+    /*
+        flex: 1   ---> is equivalent to flex: 1 1 0;  --> which is a shorthand
+        to flex-grow , flex-shrink ,& flex-basis respectively
+    */
+    /*
+        it makes the flex elements grow and shrink with the size of the container
+
+     */
+
+    /* width: 33.3333%; */
+ 
+    /* 
+        In case of three flex items --->  flex: 1: ---> is the same as set width to 33.333% for each 
+        element
+        The advantage of using flex: 1; ---> is that when using more than three --> it changes automatically
+    */
+}
+
+.home, .logout{
+    background-color: mediumspringgreen;
+}
+
+
+.search{
+    background-color: skyblue;
+}
+
+
+/* If we have to set the width of some element to twice of other elments */
+.container > .search{
+    flex: 2;
+}
+
+
+/* but doing the following won't work .. as .container > div is more specific */
+.search{
+    flex: 2;
+}

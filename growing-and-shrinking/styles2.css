@@ -1,0 +1,26 @@
+
+
+div{
+    background-color: aqua;
+}
+
+.container{
+    font-size: 30px;
+    border: 2px solid rebeccapurple;
+    background-color: gray;
+    padding: 10px;
+    display: flex;
+
+}
+
+.search{
+    background-color: antiquewhite;
+}
+
+/* .container > div{
+    flex: 1;
+} */
+
+.container > .logout, .home{
+    flex-shrink: 0;
+}

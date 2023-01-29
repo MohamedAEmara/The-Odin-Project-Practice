@@ -57,7 +57,7 @@
     background-color: white;
     height: 30px;
     margin-top: 30px;
-    
+    flex: 600;
     /* to distribute the space between the flex item */
     /* The first and the last one will be at the two far ends of the page */
     justify-content: space-between;
