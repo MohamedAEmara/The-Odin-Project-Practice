@@ -1,0 +1,45 @@
+.container{
+    border: 2px solid red;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         /*  Vertically  */
+    align-items: flex-end;           /* Horizontally */
+    /*justify-content: space-around; */   /* Works for the main axis --> in this case "Vertically" */
+}
+
+.one, .two, .three{
+    border: 1px solid blue;
+}
+
+
+/*  ================  NOTE  =================== */
+/*
+    To Align only a specific element we use "align-self" 
+*/
+
+.two {
+    align-self: center;
+}
+
+.one {
+    align-self: flex-start;
+}
+
+.three {
+    align-self: flex-end;
+}
+
+/*             Voila! Diagonal shape           */
+
+
+.container {
+    gap: 20px; 
+
+    /*
+        This property sets the gap between flex elements
+        vertically or horizontally depending on the 
+        flex-direction
+    */
+}

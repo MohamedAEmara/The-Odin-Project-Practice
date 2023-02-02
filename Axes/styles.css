@@ -1,0 +1,54 @@
+div{
+    background-color: aqua;
+}
+
+.container{
+    font-size: 30px;
+    border: 2px solid rebeccapurple;
+    background-color: gray;
+    padding: 7px;
+    display: flex;
+    flex-grow: 1;
+    /* The default direction of flex box is "horizontal" or "row" */
+    /* If we want to change it to "Vertical" : flex-direction: column; */
+    flex-direction: column; 
+    /* This will arrange the flex items from top to bottom "Vertically" */
+
+    /* And in this case flex-basis refers to "height" not width */
+
+    /* Again Set the flex-direction to default "row" */
+    /* flex-direction: row; */
+
+    /* aligns items across the main axis.  */
+    /* justify-content: space-around; */
+
+
+    justify-content: center;
+    
+    align-items:flex-end;
+
+
+                            /* NOTEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+    /*
+        if the flex-direction is horizontal  --> then,
+        justify-content aligns horizontally and align-items aligns vertically
+        
+        
+        if the flex direction is vertical ---> then,
+        justify-content aligns vertically and align-items aligns horizontally
+    */
+}
+
+.search{
+    background-color: antiquewhite;
+}
+
+
+
+.container > .search{
+    flex-grow: 2;
+   
+}
+.container > .logout, .home{
+    flex-grow: 1;
+}
