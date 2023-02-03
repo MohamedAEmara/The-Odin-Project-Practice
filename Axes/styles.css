@@ -25,7 +25,8 @@ div{
 
     justify-content: center;
     
-    align-items:flex-end;
+    align-items:flex-end; 
+    align-items: stretch;  /* To make the box strech to fill all space in to cross axis direction */
 
 
                             /* NOTEEEEEEEEEEEEEEEEEEEEEEEEEEE */

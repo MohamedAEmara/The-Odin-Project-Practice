@@ -3,7 +3,7 @@
     width: 350px;
     height: 200px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;         /*  Vertically  */
     align-items: flex-end;           /* Horizontally */
     /*justify-content: space-around; */   /* Works for the main axis --> in this case "Vertically" */
@@ -19,19 +19,42 @@
     To Align only a specific element we use "align-self" 
 */
 
+
+/* >>>>>>>>>>>>> It's applied to a child element not the container <<<<<<<<<<<<<< */
+
 .two {
+    width:3000px;
     align-self: center;
 }
 
 .one {
+    width:3000px;
+
     align-self: flex-start;
 }
 
 .three {
+    width:3000px;
+    /*
+        In flex-box mode Width is not respected if it's larger than the 
+        free space in the page
+    */
+
     align-self: flex-end;
 }
 
 /*             Voila! Diagonal shape           */
+
+/* ================= ATEENTION, Here =============== */
+/*
+    In flex-box --> there is just one primary axis and many cross axes
+    depending on how many flex elements in our flex box
+
+    So, there is "align-self" but no justify-self
+    because we can't move align one element "In the primary direction"
+    without affecting all other element 
+*/
+
 
 
 .container {

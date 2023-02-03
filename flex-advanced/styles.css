@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(49, 59, 59);
+    color: white;
+    font-size: 30px;
+
+    
+}
+
+
+.container {
+    align-items: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+
+.name {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 160px;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    flex-basis: 200px;
+}
+
+.button {
+    flex-grow: 1;
+    flex-basis: 80px;
+    font-size: 25px;
+}
