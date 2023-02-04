@@ -1,0 +1,118 @@
+>>>>>>>>>>>>>> =======  FLEX BASIS  ======= <<<<<<<<<<<<<
+
+Flex-basis ----> it's simply like width or height property
+depending on what the flex-direction is.
+
+In general,
+We can use width and flex-basis interchangeably in a Flex row,
+but there are some exceptions. For example, 
+the width property affects replaced elements like images differently 
+than flex-basis. 
+Also, width can reduce an item below its minimum size, 
+while flex-basis can't.
+
+
+
+
+>>>>>>>>>>>>>> =======  FLEX GROW  ======= <<<<<<<<<<<<<
+
+The default value for flex-grow is 0, which means that growing is opt-in.
+If we want a child to gobble up any extra space in the container,
+we need to explicitly tell it so.
+
+
+What if multiple children set flex-grow? 
+In this case, the extra space is divvied up between children, 
+proportionally based on their flex-grow value.
+
+
+
+
+
+>>>>>>>>>>>>>> =======  FLEX SHRINK  ======= <<<<<<<<<<<<<
+
+In most of the examples we've seen so far, we've had extra space to work with. 
+But what if our children are too big for their container?
+
+If we have two boxes on of them is 2X the other one  (The dimension in the main axis)
+When there is no extra space ---> the two boxes have to shrink.
+If the two boxes have the same flex-shrink value ---> The ratio between them will remain
+the same 1:2 after shrinking
+So, they'll always scale together, preserving the ratio between both elements.
+
+if the flex shrink of one item is 1 and the other is 2
+When shrinking the size of the page ---> If the first is reduced by 10% the second will be 
+reduced by 20% 
+
+We can calculate the new width of each item by calculating the new container size and the 
+actual sizes of the items ---> Now we have the total deficit 
+by default, the total deficit is distributed equally between all items
+but if we have some items with flex-shrink value other than 1 ---> We have to distribute
+it proportionally
+
+Note that the absolute values don't matter, it's all about the ratio. 
+If both children have flex-shrink: 1, each child will pay ½ of the total deficit. 
+If both children are cranked up to flex-shrink: 1000, each child will pay 1000/2000 of the total 
+deficit. Either way, it works out to the same thing.
+
+
+
+
+
+
+
+
+
+only one of these properties can be active at once. 
+If there's extra space, flex-shrink has no effect, since the items don't need to shrink. 
+And if the children are too big for their container, flex-grow has no effect, 
+because there's no extra space to divvy up.
+
+
+
+
+
+>>>>>>>>>>>>>> =======  PREVENTING SHRINKING  ======= <<<<<<<<<<<<<
+
+Sometimes, we don't want some of our Flex children to shrink. "A photo or a specific shape for example"
+
+We can prevent that by setting flex-shrink to that item ZERO
+felx-shrink: 0;
+
+
+
+
+
+
+
+>>>>>>>>>>>>>> =======  WRAP  ======= <<<<<<<<<<<<<
+
+When we set flex-wrap: wrap, items won't shrink below their hypothetical size. 
+At least, not when wrapping onto the next row/column is an option!
+
+And in this case each line or each row has its own primary axis and has its own container
+
+
+
+
+
+
+>>>>>>>>>>>>>> =======  MAX-Width  ======= <<<<<<<<<<<<<
+
+When you want to control an image and guarantee that it won't take more space 
+than wanted.
+Set a max-width: to this image
+max-width: 100px; for exmaple.
+
+
+
+
+
+
+
+
+
+To change the position of an image to the right not to the left for example
+flex-direction: row-reverse;
+
+Reference: https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/

@@ -59,6 +59,17 @@
     display: flex;
     padding: 20px;
 
+    /* 
+        The default in flex-box is nowrap --> if the size is less than
+        the actual size of the box --> The box shrinks & all in the same line
+    */
+    /* 
+        But in wrap flex --> if the dimensions of the window is less than
+        the width of the sizes of the items --> elements of the far end 
+        go to the next line but don't shrink 
+    */
+    flex-wrap: wrap;
+
     /*
         By default the flex elements try to fit into one line but "flex-wrap: wrap;"
         will ignore that. 
