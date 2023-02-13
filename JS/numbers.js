@@ -88,3 +88,4 @@ alert(myNumber);
 // Null equals zero when it's in an operation with other numeric operands 
 alert(null + 9);
 
+
