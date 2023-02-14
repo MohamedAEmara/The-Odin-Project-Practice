@@ -101,3 +101,10 @@ alert( null || 2 && 3 || 4 );       // 3
 // The precedence of AND && is higher than ||, so it executes first.
 // The result of 2 && 3 = 3, so the expression becomes:
 // null || 3 || 4
+
+
+
+
+// ============================ prompt =============================== // 
+let age = prompt('How old are you', '20');  // the pop-up message will ask you the previous question, and the default value will be 20
+// If we don't change it, it will be 20.
