@@ -1,3 +1,8 @@
+
+  
+
+alert('ok')
+
 function random(number) {
     return Math.floor(Math.random() * number);
 }
@@ -54,3 +59,81 @@ for(let i = 0; i < doubled.length; i++)
 function doubledItem(item) {
     return item * 2;
 }
+
+
+
+// There is another syntax for creating a function that is called a Function Expression.
+// It allows us to create a new function in the middle of any expression.
+
+let sayHi = function() {
+    alert('Hello');
+};
+
+sayHi();
+
+
+
+function sayHello()            {
+    alert( "Hello" );
+}
+  
+alert( sayHello );  // shows the function code
+// This line does not run the function becaues there is no parentheses after sayHello.
+
+
+
+
+// Example:
+
+
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+  
+function showOk() {
+    alert( "You agreed." );
+}
+
+function showCancel() {
+    alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+  
+
+
+// A shorter way to ask the same question 
+
+ask2(
+    "Do you agree?", 
+    function(){alert("You agreed.");}, 
+    function(){alert("You canceled the execution.");}
+);
+
+
+
+
+// ================================= Function expression VS Function declaration ================== //
+
+// function declaration:
+// function sum(a, b){
+//     return a + b;
+// }
+
+// function expression:
+let sum = function(a, b){
+    return a + b;
+};
+
+alert(sum(4, 5));        // 9
+
+
+
+// ======================================= Arrow Expression =========================== //
+let doubled2 = n => n*2;
+alert(doubled2(3));
+
+let sayHello2 = () => alert('Hello!');
+sayHello2();
