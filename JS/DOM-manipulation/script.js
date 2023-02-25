@@ -84,3 +84,32 @@ div.style.backgrounColor   = "red";
 div.style['background-color'] = 'red';
 // ======= OR ======= //
 div.style.cssText = "background-color: white;"   // ok in a string
+
+
+
+
+
+
+
+
+div.setAttribute('id', 'theDiv');                              
+// if id exists, update it to 'theDiv', else create an id
+// with value "theDiv"
+
+div.getAttribute('id');
+// returns a value of specified attribute, in this case:
+// "theDiv"
+
+
+div.removeAttribute('id');
+// removes specified attribute.
+
+
+// =============== Adding text content ======================== //
+div.textContent = 'Hello, there';
+// creates a text node containing "Hello World!" and
+// inserts it in div
+
+
+div.innerHTML = '<span>Hello World!</span>';     
+// renders the HTML inside div
