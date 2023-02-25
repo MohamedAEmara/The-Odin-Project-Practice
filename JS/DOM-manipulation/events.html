@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="events.js" defer></script>
+
+    </head>
+
+    <body>
+        <!-- Method 1 -->
+        <button onclick="alert('Hello, there! - Method 1')">Button1</button>
+        <!-- This solution is less than ideal because we’re cluttering our HTML with JavaScript.  -->
+
+
+
+        <!-- Method 2 -->
+        <button id="btn">Click Me</button>
+
+
+
+        <!-- Method 3 -->
+        <button id="btn3">Click Me Too</button>
+
+
+        <!-- We can also modify method one and separate js and html like this. -->
+        <button onclick='alertFunction()'>a button too</button>
+        <!-- 
+            Using named functions can clean up your code considerably, and is a really good idea 
+            if the function is something that you are going to want to do in multiple places. 
+        -->
+
+
+
+        <!-- target more than a node -->
+        <div id="container">
+            <button id="one">Button 1</button>
+            <button id="two">Button 2</button>
+            <button id="three">Button 3</button>
+        </div>
+
+
+    </body>
+</html>
