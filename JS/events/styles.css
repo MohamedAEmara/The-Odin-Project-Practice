@@ -1,0 +1,15 @@
+div {
+    padding: 50px;
+}
+
+.one {
+    background-color: gray;
+}
+
+.two {
+    background-color: rgb(156, 151, 151);
+}
+
+.three {
+    background-color: rgb(211, 208, 208);
+}
