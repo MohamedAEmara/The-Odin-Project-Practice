@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+        const person = {
+            name: 'Bob',
+            age: 32,
+            bio: function() {
+                console.log(`This is ${this.name} has ${this.age} years old.`);
+            },
+            introduceSelf: function() {
+                console.log(`Hi, I'm ${this.name}`);
+            }
+        }
+
+        console.log(person.bio());
+        person.introduceSelf();
+
+
+        // An object property can itself be an object. For example, try changing the name member from
+        const person2 = {
+          name: {
+            first: "Bob",
+            last: "Smith",
+
+          }
+      
+        };
+
+        // to access these item, you need to add a dot notation
+        person2.name.first;
+        console.log(person2.name.first);
+        console.log(person2.name[0]);
+
+        person2.age = 33;                     // create a new property
+        person2["name"]["first"] = "Ahmed";   // same as ==> person2.name.first = 'Ahmed';
+        console.log(person2.name.first);      // "Ahmed"
+
+
+        const user = {
+          name: ['Alice', 'Bob'],
+          age: 32
+        };
+
+
+        function getValue(propertyName) {
+          console.log(user[propertyName]);
+        }
+
+        getValue('name');
+        getValue('age');
+      
+        const myDataName = "height";
+        const myDataValue = "1.75m";
+        user[myDataName] = myDataValue;
+        console.log(user.height);
+
+
+
+        function createPerson(name) {
+          // const this = {};
+          this.name = name;
+          this.introduceSelf = function() {
+            console.log(`Hi! I'm ${this.name}`);
+          };
+        };
+
+        const mohamed = createPerson("Mohamed");
+        const omar = createPerson("Omar");
+        omar.introduceSelf();
+        Mohamed.introduceSelf();
+    </script>
+  </body>
+
+</html>
