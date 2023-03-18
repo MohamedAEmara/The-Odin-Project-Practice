@@ -81,6 +81,114 @@
     <button type="button"></button>
     
 
+    <!-- Add elements with some children -->
+    <!-- 
+        header>nav>ul>li*3
+        add header element ==> in it add a nav element ==> in it add ul element ==> in it add x3 li element 
+        
+        As following:
+    -->
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+        If we want to add a text in every li element in the previous example:
+        
+        header>nav>ul>li*3{Text Added Here will be displayed in all li elements}
+    -->
+    <header>
+        <nav>
+            <ul>
+                <li>Text Added Here will be displayed in all li elements</li>
+                <li>Text Added Here will be displayed in all li elements</li>
+                <li>Text Added Here will be displayed in all li elements</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- 
+        We us dollar sign to generate ordered numbers 
+        header>nav>ul>li*3{Text #$}
+    -->
+
+    <header>
+        <nav>
+            <ul>
+                <li>Text #1</li>
+                <li>Text #2</li>
+                <li>Text #3</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  
+        If we add anther dollar sign ===> this will padd a zero before the number
+        header>nav>ul>li*4{Text #$$}
+    -->
+    <header>
+        <nav>
+            <ul>
+                <li>Text #01</li>
+                <li>Text #02</li>
+                <li>Text #03</li>
+                <li>Text #04</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- To add a siblings to a specific element  -->
+    <div>
+        <!-- Inside the element ==> button+span+div -->
+        <button></button>
+        <span></span>
+        <div></div>
+    </div>
+
+    <!-- 
+        If we want to create a div element has 3 buttons inside & 2 spans 
+        div>button*3+span*2
+    -->
+    <div>
+        <button></button>
+        <button></button>
+        <button></button>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!--  
+        Now, If we want to create a div element containing 3 buttons and 2 spans but not inside the div
+        So, we want to climb the two spans up using (^) Like following
+    
+        div>button*3^span*2
+    -->
+    <div>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+    <span></span>
+    <span></span>
+
+    <!--  
+        Another way to do that is to use parentheses to group some elements together
+        (div>button*3)+span*2
+    -->
+    <div>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+    <span></span>
+    <span></span>
+
 </body>
 </html>
 
