@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table Template</title>
+        <link href="minimal-table.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Table template</h1>
+        <table>
+            <tr>        <!-- The first row -->
+                <td>Hi, I'm your first cell</td>    
+                <td>Hi, I'm your second cell</td>
+                <td>Hi, I'm your thrid cell</td>
+                <td>Hi, I'm your fourth cell</td>
+            </tr>
+            <tr>
+                <td>Cell 1.</td>
+                <td>Cell 2.</td>
+                <td>Cell 3.</td>
+                <td>Cell 4.</td>
+            </tr>
+        </table>
+
+        <p></p>
+
+        <table>
+            <tr>
+                <td></td>
+                <th>Knocky</th>
+                <th>Flor</th>
+                <th>Ella</th>
+                <th>Juan</th>
+            </tr>
+            <tr>
+                <th>Breed</th>
+                <td>Jack Russel</td>
+                <td>Poodle</td>
+                <td>Streetdog</td>
+                <td>Cocker Spaniel</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>16</td>
+                <td>9</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th>Owner</th>
+                <td>Mother-in-law</td>
+                <td>Me</td>
+                <td>Me</td>
+                <td>Sister-in-law</td>
+            </tr>
+            <tr>
+                <th>Eating Habits</th>
+                <td>Eats everyone's leftovers</td>
+                <td>Nibbles at food</td>
+                <td>Hearty eater</td>
+                <td>Will eat til explodes</td>
+            </tr>
+        </table>
+
+        <p></p>
+
+        <table>
+            <tr>
+              <th colspan="2">Animals</th>      
+              <!-- colspan = "2" makes the width of this cell twice of other cells -->
+            </tr>
+            <tr>
+              <th colspan="2">Hippopotamus</th>
+            </tr>
+            <tr>
+              <th rowspan="2">Horse</th>
+              <!-- rowspan = "2" makes the height of this cell twice the other cells -->
+              <td>Mare</td>
+            </tr>
+            <tr>
+              <td>Stallion</td>
+            </tr>
+            <tr>
+              <th colspan="2">Crocodile</th>
+            </tr>
+            <tr>
+              <th rowspan="2">Chicken</th>
+              <td>Hen</td>
+            </tr>
+            <tr>
+              <td>Rooster</td>
+            </tr>
+        </table>
+          
+        <p></p>
+
+        <table>
+                <tr>
+                    <th>Data 1</th>
+                    <th style="background-color: yellow">Data 2</th>
+                </tr>
+                <tr>
+                    <td>Calcutta</td>
+                    <td style="background-color: yellow">Orange</td>
+                </tr>
+                <tr>
+                    <td>Robots</td>
+                    <td style="background-color: yellow">Jazz</td>
+                </tr>
+
+                <!-- This is so annoying repeating the same style at every row at this colum -->
+        </table>
+          
+        <!-- Now, We have a smarter method, "" -->
+        <!-- Styling using "<col>" method -->
+    
+        <p></p>
+        
+        <table>
+            <colgroup>
+
+                <!-- 
+                    <col> elements are specified inside a <colgroup> container just below the opening <table> 
+                    tag. We could create the same effect as we see above by specifying our table as follows:
+                -->
+                
+                <col />         <!-- The first column has no specific style-->
+                <col style="background-color: yellow;">   <!-- The second col has a yellow background -->
+                
+            </colgroup>
+
+            <!-- If we want to apply styling on both cols, add span="2" -->
+
+            <colgroup>
+                <col style="background-color: yellow" span="2" />
+            </colgroup>
+
+            <!-- Note that if there is more than a colgroup element,
+                only the one after the openning tag <table> will be applied
+            -->
+            
+              
+            <tr>
+                <td>Data 1</th>
+                <td>Data 2</th>
+            </tr>
+            <tr>
+                <td>Calcutta</td>
+                <td>Orange</td>
+            </tr>
+            <tr>
+                <td>Robots</td>
+                <td>Jazz</td>
+            </tr>
+        </table>
+          
+          
+
+    
+    
+    </body>
+</html>
