@@ -1,0 +1,10 @@
+button {
+    margin-top: 40%;
+    margin-left: 40%;
+    font-size: large;
+    padding: 20px;
+    width: 30vw;    /*30% of the view width */
+    height: 100vh;  /*30% of the view width */
+    /* When you change the dimensions of the page, the dimensions of the button will change in turn */
+    
+}
