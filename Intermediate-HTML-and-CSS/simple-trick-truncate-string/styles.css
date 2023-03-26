@@ -1,0 +1,19 @@
+
+
+div {
+    font-size: 40px;
+    padding: 10px;
+    background-color: beige;
+    border: 3px solid brown;
+    margin: 20px;
+}
+
+
+
+
+.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

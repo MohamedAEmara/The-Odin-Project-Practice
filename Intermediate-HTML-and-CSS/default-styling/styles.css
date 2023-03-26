@@ -1,10 +1,63 @@
+
+
+/* Difference between %  ,  vw */
+/*
+    % length is relative to local context (containing element)
+    vm length is relative to the full width of the browser window
+*/
+
+/* vmin && vmax */
+/*  
+    (vmin) – A percentage of the viewport width or height, whichever is smaller.
+    10vmin ---> will resolve to 10% of the current viewport width in "portrait" orientation
+    and 10% of the viewport height on landscape orientation
+
+    (vmax) - A percentage of the viewport width or height, whichever is larger
+    10vmax will resolve to 10% of the current viewport height in "portrait" orientation
+    and 10% of the viewport width on landscape orientation
+*/
+
+
 button {
     margin-top: 40%;
-    margin-left: 40%;
+    margin-left: 40%;   
     font-size: large;
     padding: 20px;
     width: 30vw;    /*30% of the view width */
     height: 100vh;  /*30% of the view width */
     /* When you change the dimensions of the page, the dimensions of the button will change in turn */
+    
+
+
+}
+
+button {
+    /*  
+        A common way to apply DRY technique is to declare a variable 
+        to store a specific property value
+        As follows:
+    */
+
+    /* A variable MUST begin with two dashes */
+    /* also, it can't contain any special characters */
+
+    --myColor: antiquewhite;
+    background-color: var(--myColor);
+    font-family: 'delicious handrawn', sans-serif;
+    /* 
+        it's better to add a fallback font so that if the link of the font changed or something wrong happened to the API
+        there are alternatives
+    */
+}
+
+
+
+div {
+
+    background-color: antiquewhite;
+    border: 0.3em solid olive;
+    padding: 2vh;
+    margin: 10rem;
+    font-size: calc(1em + 20px);
     
 }

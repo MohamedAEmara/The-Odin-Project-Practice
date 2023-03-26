@@ -1,0 +1,97 @@
+/* to import external fonts that are not installed on the user's computer */
+/*
+    1- you can use link to the source of the font
+    then you'll be able to use it 
+    As follows:
+*/
+
+/*  import external source for fonts to be able to use it below  */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Delicious+Handrawn&display=swap');
+
+
+
+div {
+    font-size: 40px;
+    padding: 10px;
+    background-color: beige;
+    border: 3px solid brown;
+    margin: 20px;
+
+    font-family: 'Delicious Handrawn';
+}
+
+
+/* the other way is to include the path of the font file, give it a name & use it in your styling. */
+@font-face {
+    font-family: my-cool-font;
+    src: url(.font/Calligraffitti-Regular.ttf);
+}
+/* This method may be more reliable than relying on a third-party font API, 
+but it is always wise to include a fallback. */
+
+div {
+    font-family: my-cool-font, sans-serif;
+}
+
+/* Italic  */
+/* 
+    there's another way to make an element italic rather than using <em> element in HTML
+    You can use the property ""font-style: italic;"" in CSS.
+*/
+
+div {
+    font-style: italic;
+}
+
+
+/* =========== letter spacing ============ */
+/* 
+    it changes the space between letters in a word. This can be useful for 
+    adjusting custom fonts that you feel have too much or too little space.
+*/
+
+div {
+    letter-spacing: 0.2em;
+    letter-spacing: -3px;
+    /* Note that we can use negative values that will make letters interfere */
+}
+
+/* ============ line height ============== */
+/*  
+    Line height adjusts the space between lines in wrapped text. 
+    Adding a little line-height can increase readability.
+*/
+
+div {
+    line-height: 20px;
+    /* this will be applied when the text takes more than one line */
+}
+
+
+/* ============ Capitalization, lowercase & UPPERCASE ============ */
+#one {
+    text-transform: capitalize;     /* The first character of each word is capital */ 
+}
+
+#two {
+    text-transform: uppercase;      /* All characters are upper case */
+}
+
+#three {
+    text-transform: lowercase;      /* All characters are lower case */
+}
+
+
+/*  ========================= Text Shadow ======================== */
+
+#one {
+    background-color: white;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: -2px -2px 1px orange;
+
+}
+
+
+
+  
