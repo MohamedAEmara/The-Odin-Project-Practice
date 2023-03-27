@@ -1,0 +1,44 @@
+p {
+    border: 0.8em darkviolet;
+    border-style: dotted double;
+    margin: 1em 0;
+    padding: 1.4em;
+    background: linear-gradient(60deg, red, yellow, red, yellow, red);
+    font: 900 1.2em sans-serif;
+}
+
+  
+.border-box {
+    background-clip: border-box;
+}
+.padding-box {
+    background-clip: padding-box;
+}
+.content-box {
+    background-clip: content-box;
+}
+  
+.text {
+    background-clip: text;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 0, 0.5),         /* this is the color of the right most */
+    rgba(0, 0, 255, 0.5)            /* this is the color of the left most */
+  ), url("catfront.png");
+
+  background-image: linear-gradient(
+    to bottom, 
+    black,          /* this is the color of the top most */
+    white           /* this is the color of the bottome most */
+  ), url(.img/svg-path.svg);
+
+  background: no-repeat  linear-gradient(
+    red, white          /* The default is to bottom */
+  );
+
+
+}

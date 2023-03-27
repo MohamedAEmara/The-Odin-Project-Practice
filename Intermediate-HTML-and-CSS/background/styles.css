@@ -1,0 +1,52 @@
+/* =============== background ============= */
+/* 
+    it's a shorthand for 8 CSS properties:
+        - background-attachment
+        - background-clip
+        - background-color
+        - background-image
+        - background-origin
+        - background-position
+        - background-repeat
+        - background-size
+*/
+
+div {
+    /* those are equivalent to make background-color = green */
+    background: green;
+    background-color: green;
+
+    
+    /* to add an imgage */
+    background-image: url(.img/spong.png);         /* repeat till all the window filled with this image */
+    background: no-repeat url(.img/spong.png);     /* takes only the size of the image without repeat */
+    background: repeat-x url(.img/spong.png);      /* repeats the image only in x direction */
+    background: repeat-y url(.img/spong.png);      /* repeats the image only in y direction */
+
+    
+    /* background: border-box red; */
+    /* background-color: antiquewhite; */
+    /* background:  url(".img/sponge.jpeg"), url(.img/105-1053545_spongebob-squarepants-jump-vector-spongebob-loot-bags-8-pack.jpeg) ; */
+    /* background:  url(.img/105-1053545_spongebob-squarepants-jump-vector-spongebob-loot-bags-8-pack.jpeg), url(".img/sponge.jpeg"); */
+
+    background:  url(.img/svg-path.svg), no-repeat center/80% url(".img/sponge.jpeg");
+
+
+    background-attachment: fixed, scroll;   /* The first background image will be fixed but the second will scroll with the text*/
+    background-attachment: scroll, fixed;   /* The first background image will scroll with the text but the second will be fixed*/
+    background-attachment: scroll;          /* both of the two images will scroll with the text */
+    background-attachment: fixed;           /* both of the two images will be fixed while scrolling down */
+
+  background-position: bottom;
+  background-size: contain;       /*  scales the background image to fit within the container, while also maintaining the aspect ratio of the image.  */
+  background-size: cover;         /* scales the background image to cover the entire container, while maintaining the aspect ratio of the image. */
+    
+}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 0px olive;
+    padding:100px;
+
+}
+
