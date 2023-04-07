@@ -1,0 +1,23 @@
+div {
+    padding: 20px;
+    margin: 30px;
+    font-size: 30px;
+    background-color: lightgrey;
+    border: 2px solid black;
+
+    /* offset-x | offset-y | color */
+    box-shadow: -5px 10px gray;
+    /* positive x: means shadow to right */
+    /* negative x: means shadow to left */
+    /* positive y: means shadow to bottom */
+    /* negative y: means shadow to top */
+
+
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow:  10px 5px 5px black;
+    /* blur-radius: increases the area of the shadow, but makes it blured */
+    
+    /* inset | offset-x | offset-y | color */
+    box-shadow: inset -10px 5px 5px black;
+    /* the shadow inside the box & flipped direction */
+}
