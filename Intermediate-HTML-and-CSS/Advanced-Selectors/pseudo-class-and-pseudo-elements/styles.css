@@ -1,0 +1,83 @@
+/*  
+    Pseudo-classes are keywords that start with a colon. For example,
+    :hover is a pseudo-class. 
+*/
+
+.first {
+    font-size: 120%;
+    font-weight: bold;
+}   
+
+/* Another way to select the first paragraph */
+
+article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}   
+    
+/* To apply styling to the last child we can do this: */
+article p:last-child {
+    background-color: antiquewhite;
+}
+
+/* 
+    All pseudo-classes behave in this same kind of way. 
+    They target some bit of your document that is in a certain state, 
+    behaving as if you had added a class into your HTML.  
+*/
+
+                        /* User Action Pseudo Classes */
+
+/*  
+    Some pseudo-classes only apply when the user interacts with the document in some way. 
+    These user-action pseudo-classes, sometimes referred to as dynamic pseudo-classes, 
+    act as if a class had been added to the element when the user interacts with it. 
+    Examples include:
+        :hover
+        :focus
+*/
+
+a:hover {
+    color:purple;
+}   
+
+
+/* ======================== Pseudo element ========================= */
+
+/*  
+    For example, if you wanted to select the first line of a paragraph you could wrap it in a <span> element 
+    and use an element selector; however, that would fail if the number of words you had wrapped were longer 
+    or shorter than the parent element's width. As we tend not to know how many words will fit on a line — 
+    as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.
+*/
+
+/* When you zoom in the content of the first line decreases, so the styling in turn will also apply only on this line */
+article p::first-line {
+    background-color: beige;
+}   
+    
+/* Combining pseudo-classes and pseudo-elements */
+
+/*  
+    If you wanted to make the first line of the first paragraph bold you could chain the :first-child and ::first-line selectors together. 
+    Try editing the previous live example so it uses the following CSS. We are saying that we want to select the first line, of the first <p> element, 
+    which is inside an <article> element.
+*/
+
+article p:first-child::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+/* Generating content with ::before  &  ::after */
+
+/* You could use these to insert a string of text */
+
+.box::before {
+    content: "This is a text added before the content of the box using CSS. ";
+}
+
+.box::after {
+    content: " This is a text added after the content of the box using CSS. ";
+}

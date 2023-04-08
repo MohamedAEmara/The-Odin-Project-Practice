@@ -1,0 +1,17 @@
+div {
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    word-spacing: 10px;
+
+
+
+    opacity: 0;     /* The element is fully transparent */
+    opacity: 1;   /* The element is fully opaque (visually solid) */
+    /* Any number between 0 & 1 will change the opacity of the element */
+
+    
+}

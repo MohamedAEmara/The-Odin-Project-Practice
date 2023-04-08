@@ -1,0 +1,59 @@
+/* 
+    ">"  this refers to child combinator
+    "+"  this refers to sibling combinator
+    "~" (telda) this refers to sibling combinator
+*/
+
+/* Three elements will be selected */
+/* only divs with a class of child */
+/* 
+main > div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+} */
+
+
+/* This rule will only select divs with a class of grand-child */
+
+/* main > div > div {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+ */
+
+/* This rule will only select the div with the class child group2 */
+.group1 + div   {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+/* This rule will only select the div with the class child group3 */
+.group1 + div + div {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+
+/* Note that the previous selectos just select the first match */
+/* 
+    if we want to select all of an element’s siblings and not just the first one, 
+    we can use the general sibling combinator ~. 
+*/
+
+
+/* This rule will select all of .group1's siblings - in this case the 2nd and 3rd .child divs */
+.group1 ~ div {
+    background-color: cyan;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+}
+
