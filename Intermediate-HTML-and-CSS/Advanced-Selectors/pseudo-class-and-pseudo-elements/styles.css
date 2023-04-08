@@ -81,3 +81,91 @@ article p:first-child::first-line {
 .box::after {
     content: " This is a text added after the content of the box using CSS. ";
 }
+
+
+/* :first-child and :last-child will match elements that are the first or last sibling. */
+
+/*  
+    Similarly, :empty will match elements that have no children at all, 
+    and :only-child will match elements that don’t have any siblings.
+*/
+
+/* 
+    For a more dynamic approach we can use :nth-child. 
+    This is a flexible pseudo-class with a few different uses.
+*/
+
+
+
+article:nth-child(2) {
+    background-color: aqua;
+}
+
+/* Just the second child in article will be applied */
+
+/* ==================================  Class Selector  ================================== */
+/* 
+    to select a class we simply type .className, But we can also access an element with part of its name
+    Or any other element attribute:
+
+    [attribute^="value"] - ^= Will match strings from the start.
+
+    [attribute$="value"] - $= Will match strings from the end.
+
+    [attribute*="value"] - *= The wildcard selector will match anywhere inside the string.
+*/
+
+[class^='fir'] {
+        background-color: black;
+    /* Classes are attributes too!
+      This will target any class that begins with 'aus':
+      class='austria'
+      class='australia'
+    */
+}
+
+/* the powerful of this way of selecting is to select all images for examples with a specific extenstion */
+[src$='.jpg'] {
+    /* This will target any src attribute that ends in '.jpg':
+    src='puppy.jpg'
+    src='kitten.jpg'
+    */
+}
+
+[for*='ill'] {
+    /* This will target any for attribute that has 'ill' anywhere inside it:
+    for="bill"
+    for="jill"
+    for="silly"
+    for="ill"
+    */
+}
+
+
+/* MORE selectors */
+
+/* 
+    div:first-of-type   ===> selects only the first div element
+    div:nth-last-child(3)    ===> selects the third child from last
+
+
+    div:nth-of-type(odd)   ===> selects even divs only
+    div:nth-of-type(2n+3)  ===> select the odd elements starting from the thrid one
+*/
+
+/* ====================================== NOT ===================== */
+
+div:not(.small)     /* select all div element which are not small */ 
+{
+    /* Styling here */
+}
+
+
+/* ==================================== [attribute] ===================== */
+[for] {
+    /* To select all elements having for attribute with any value */
+}
+
+[for='haha'] {
+    /* to select element have for element with value equal to 'haha' */
+}
