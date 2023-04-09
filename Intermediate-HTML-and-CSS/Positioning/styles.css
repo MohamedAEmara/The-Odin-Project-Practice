@@ -1,0 +1,88 @@
+.one {
+    background-color: greenyellow;
+}
+
+.two {
+    background-color: red;    
+}
+
+.three {
+    background-color: pink;
+}
+
+.parent > * {
+    padding: 5px;
+}
+
+.parent {
+    padding: 10px;
+    background-color: blue;
+}
+
+/* ======================== positioning ======================== */
+
+.one {
+    /* default positioning is static */
+    /* When changing position to relative nothing changes in the output */
+    position: relative;
+    /* but it allows you to use four direction positioning */
+    left: 10px;     /* away from other element from left side by 10px */
+    bottom: 20px;  
+
+    /* Note that this may make elements overlaps or be over each other */
+    /*  
+        making it relative takes the element out of the document & reposition it.
+    */
+}
+
+/* ======================== absolute ======================== */
+
+.two {
+    position: absolute;
+    top: 10px;
+    /* 
+        هيتعامل معاه علي انه 10 بيكسل من الصفحة كلها مش من أبوه الديف 
+        عشان الــ parent' position is static not relative (or absolute)
+        if we changed the position of the parent to relative this div will be 10px below parent
+    */
+}
+
+/* ======================== relative ======================== */
+
+.parent {
+    position: relative;
+    /* 
+        So, relative is important in this case, when we want to position something absolute inside it 
+        otherwise the element will fall back to the next relative element or all the way back to html 
+    */
+    /*  
+        Note:
+            if we set the position to relative without any left, right, ... this will have not effect.
+    */
+    height: 2000px;
+}
+
+/* ======================== fixed ======================== */
+
+.two {
+    position: fixed;
+    /* this will ignore the relative positioning of the parent and will reference the html */
+    /* This position will not change even if the page is very large and we scroll down */
+
+}
+
+/* ======================== sticky ======================== */
+
+
+.parent {
+    height: 2000px;
+}
+
+.one {
+    position: sticky;
+    top: 20px;
+    /* this element will stick when the top = 10px to the html element when we scroll down */
+    /*  
+        so, by default it's relatvie but as soon as we scroll out the page it becomes fixed positioning 
+    */
+}
