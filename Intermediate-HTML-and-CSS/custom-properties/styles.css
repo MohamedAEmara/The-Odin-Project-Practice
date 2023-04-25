@@ -1,0 +1,43 @@
+:root {
+    --bg: black;
+}
+
+body {
+    /* Note if I want to add three options for some property */
+    /* this way is invalid */
+    /* background-color: var(--bfg, --ggg,  yellow); */
+    /* Instead, we can define nested var as follows: */
+    background-color: var(--bfg, var(--bg, yellow));
+
+}
+
+.error-modal {
+    --color-error-text: red;    /*Note that the custom name is CASE SENSITIVE */ 
+    --modal-border: 1px solid black;
+    --modal-font-size: calc(2rem + 5vw);
+  
+    /*  
+        we can store any valid CSS value in our newly declared custom property, 
+        whether it be a simple color value, shorthand values, 
+        or even a more complex function, just to give you a few examples.
+    */
+
+    color: var(--color-error-text);
+    border: var(--modal-border);
+    font-size: var(--modal-font-size);
+
+    /* 
+        Actually, var function accepts two parameters,
+        the first one is the custom property,
+        the second parameter is an optional fallback value
+        === the fallback value will be used if the custom property is invalid or hasn’t been declared yet. ===    
+    */
+}
+
+
+.fallback {
+    --color-text: white;
+  
+    background-color: var(--undeclared-property, black);
+    color: var(--undeclared-again, var(--color-text, yellow));
+}

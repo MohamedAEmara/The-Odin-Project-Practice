@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    background-color: 15px;      /* Will not change any thing as it's syntax error*/
+    /* So, this line will be as if it doesn't exist */
+    background-color: aliceblue;
+}
+
+/* What if we used custom property but with invalid value? */
+
+
+:root {
+    --bg-color: 12px;
+}
+
+body {
+    background-color: var(--bg-color);      /* As it's an invalid value */
+    /* this property will take the first value of it (default) */
+}

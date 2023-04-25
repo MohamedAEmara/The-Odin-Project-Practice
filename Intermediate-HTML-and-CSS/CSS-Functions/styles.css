@@ -1,0 +1,12 @@
+/* calc() funtion */
+/* 
+    - used to mixing units.
+    - can use nested calc() ===> calc(calc() - calc())
+*/
+:root {
+    --header: 3rem;
+    --footer: 40px;
+    /* Note: to get the value in the above variables, we use "var() function"  */
+    --main: calc(100vh - calc(var(--header)));
+
+}
