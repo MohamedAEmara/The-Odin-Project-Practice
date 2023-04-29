@@ -1,0 +1,25 @@
+Note that one of the differences between input & textarea
+elements is that 
+    - input doesn't need a closing tag
+        <input type="text" />
+    - but textarea has a closing tag   
+        <textarea> </textarea>
+
+Another difference when we want to set default value for them
+    - input has an attribute called value in which we can add the default value
+    - but textarea takes the default value between its openning & closing tags.
+
+
+
+-----------------------------------------------
+
+The default value for button is type="submit"
+
+-----------------------------------------------
+
+On of the importance of using the same id in input & for in label
+is the label is clickable
+If there is a radio button, and you want to check the second item
+Instead of clicking the small are of the button,
+You can click on the associated label to choose this option.
+
