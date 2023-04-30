@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#" method="get">
+            <!-- ================ Required Validation ============== -->
+            <!--  
+               To make field required, we add the required attribute to the element
+                
+            -->
+            <label for="mail" name="mail">Email: </label>
+            <input type="text" id="mail" name="mail" required>
+            <!-- Adding requrire to the element will not accept numll value in this field -->
+        
+        
+            <!-- ========== Maximum-Minimum Length Validation ======== -->
+            <!-- using maxlength & minlength attributes. -->
+            <textarea name="message" id="msg" cols="30" rows="10" placeholder="What's happening?" minlength="3" maxlength="10"></textarea>
+            <!--
+                 The submit btn won't work till you meet the minimum length (3)
+                & any characters more than maxlength won't be typed.
+            -->
+        
+            <!-- ============ Min-Max value Validation ============ -->
+            <input type="number" min="1" max="10">
+            <!-- 
+                The submit button won't work unless you make the input value
+                between [1 - 10]
+            --> 
+        
+
+
+            <!-- ============== Pattern Validation ============== -->
+            <label for="zip_code">Postal / Zip Code:</label>
+            <input type="text" id="zip_code" name="zip_code" title="Please enter a valid zip code, example: 65251" pattern="(\d{5}([\-]\d{4}))">
+            <!--  
+            this pattern checks whether the entered is 5 digits followed by dash (-)
+            then, 4 digits.
+            -->
+
+            <!-- Note: the title attribute adds a descriptive message when we enter an incorrect input -->
+        
+        
+            <!-- =============== URL Validation ================= -->
+            <label for="website">Enter your website:</label>
+            <input type="url" id="website">
+
+            <!-- this type checks for a url begins with http or https: -->
+
+
+           
+            <!-- ================ Some patterns ============== -->
+            <!-- 
+                a       ==> matches one character that is a (not (b), not (aa))
+                abc     ==> matches a followed by b followed by c
+                ab?c    ==> matches a, (optionally followed by b), followed by c
+                            (ac) or (abc)
+            
+                ab*c    ==> matches a, optionally followed by any number of b's, followed by c
+                            (ac, abc, abbbc, and so on)
+                
+                a|b     ==> matches one character that is a or b
+                abc|xyz ==> matches exactly (abc) or (xyz) (but not abcxyz or a or y)
+                
+                ------------------ Example ------------------
+                if we want banana or Banana , Cherry or cherry
+
+                the pattern will be as follows:
+                    pattern="[Bb]anana|[Cc]herry"
+
+                
+            
+            -->
+            <!-- Note: the textarea element doesn't support any pattern -->
+
+
+
+            <button>Submit</button>
+        </form>
+
+    </body>
+</html>

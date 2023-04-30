@@ -1,0 +1,12 @@
+/* 
+    After selecting the element with some properties 
+    You can also select the case if it's valid or not 
+    & add your own styles.
+*/
+input[type="email"]:invalid {
+    background-color: red;
+}
+
+input[type="email"]:valid {
+    background-color: antiquewhite;
+}
