@@ -1,0 +1,77 @@
+
+
+/* =================== Another use of Grid-Area ================ */
+/*  
+    Another efficient way is to name each "Grid element" and specify every
+    cell in the grid to one of these elements
+*/
+
+#living-room {
+    grid-area: living-room;
+}
+
+#kitchen {
+    grid-area: kitchen;
+}
+
+#bedroom {
+    grid-area: bedroom;
+}
+
+#bathroom {
+    grid-area: bathroom;
+}
+
+#closet {
+    grid-area: closet;
+}
+
+
+
+.container {
+    display: inline-grid;
+    /* display: grid; */
+    grid-template: 60px 60px 60px 60px 60px / 60px 60px 60px 60px 60px;
+    background-color: lightcoral;
+    grid-template-areas: "living-room living-room living-room living-room  living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen  kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet bathroom kitchen kitchen";
+
+}
+
+/* We can use . (dot) to indecate empty cells   */
+/* As follows */
+.container {
+    display: inline-grid;
+    /* display: grid; */
+    grid-template: 60px 60px 60px 60px 60px / 60px 60px 60px 60px 60px;
+    background-color: lightcoral;
+    grid-template-areas: "living-room living-room living-room living-room  living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen  . "
+    "bedroom bedroom bathroom kitchen . "
+    "closet closet bathroom kitchen . ";
+
+}
+
+
+.room {
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+}
+
+
+/* What if we need 100 rows & 100 cols */
+/*  
+    It's not a good practice to write the width of the columns 100 times
+*/
+/* A better way is to use "repeat" function */
+
+.container {
+    display: inline-grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+}

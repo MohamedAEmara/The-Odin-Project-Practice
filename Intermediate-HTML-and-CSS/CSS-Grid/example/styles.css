@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template: 80px 200px / 150px auto;
+    /* gap: 100px 10px; */
+}
+
+/* 
+div[class*="element"] {
+    background-color: aquamarine;
+} */
+
+
+.element-1 {
+    background-color: pink;
+}
+
+.element-2 {
+    background-color: mediumseagreen;
+}
+
+.element-3 {
+    background-color: skyblue;
+}
