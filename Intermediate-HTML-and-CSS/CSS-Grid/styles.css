@@ -1,0 +1,114 @@
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px;
+    gap: 100px;
+}
+
+
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border: 2px solid brown;
+} */
+
+
+.container {
+    display: grid;
+    /* To specify the width of the columns  */
+    grid-template-columns: 150px 150px;
+    /* 
+        This means we have two columns the first one is 150 widht
+        and the second is 150px width.
+        As the default of grid is "every child is in a single line"
+        We have to specify the width of every column we want
+    */
+
+
+    grid-template-rows: 50px 50px;
+    /* Same as columns  */
+
+    /* ====== Another way to define cols and rows in CSS-Grid */
+    /* 
+        is to use grid-template
+        and include rows & cols separated by slash /
+    */
+
+
+    /*  
+        By default, CSS Grid will add additional content with implicit rows. 
+        This means the extra elements would keep being added further 
+        down the grid in a vertical fashion.
+    */
+    grid-template: 150px 150px 150px / 50px 50px;
+
+    grid-template: 50px 50px / 250px 50px 50px;
+    /* 
+        two rows with height of 50px  
+        and three columns with width 250px 50px 50px
+    */
+
+    /* If we want to specify the space for new grid elements */
+    /* 
+        We use gird-auto-rows ---> any new rows added will have
+        the width of this value 
+    */
+
+
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 50px 50px;
+    grid-auto-rows: 150px;
+
+
+    /*  
+        It would be much less common to want extra content added horizontally along the grid, 
+        but that can be set using the grid-auto-flow: column property and those implicit track sizes 
+        can be defined with the grid-auto-columns property.
+    */
+
+ 
+
+
+
+
+    
+}
+
+/* ==================== GAP ===================== */
+/*  
+    Gaps are like channels between grid elements
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 50px 50px;
+    column-gap: 10px;       /*this gap is between columns only*/
+    /* So, all rows will not have any gap between */
+
+    row-gap: 20px;
+    /* works the same as column-gap */
+
+    gap: 10px 100px;        /*a shorthand to combine row-gap & column-gap*/
+}
+
+
+
+
+.container {
+    display: grid;
+    /* 
+        Note: auto makes this column takes all valid space after subtracting
+        all widthes & gaps 
+    */
+    grid-template-columns: 100px auto 100px;
+}
+
+
+
+/* To select all classes that their name contains a word "card" */
+div[class*="card"] {
+    border: 2px solid saddlebrown;
+}

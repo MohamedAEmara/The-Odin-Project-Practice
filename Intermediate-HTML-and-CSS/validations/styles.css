@@ -1,0 +1,10 @@
+/*
+    Note that we can style the plac holder  
+    This style will only be applied when the user haven't typed anything yet.
+*/
+#msg::placeholder {
+    background-color: aqua;
+    color: blue;
+    border: 2px solid red;
+    padding: 30px;
+}
