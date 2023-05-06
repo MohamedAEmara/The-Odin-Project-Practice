@@ -1,0 +1,148 @@
+.grid-container {
+    /* To make the container resizeable */
+    /* can be resized from its bottom-right corner */
+    resize: both;
+    overflow: auto;
+    display: grid;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid grey;
+    background-color: skyblue;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+}
+
+
+
+.grid-item {
+    background-color: #444;
+    text-align: center;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+  
+p {
+    margin: 12px auto 24px;
+}
+
+img {
+    height: 60px;
+}
+
+/* ========================= Reapeat ======================== */
+/*  
+    Repeat is a CSS function available to the CSS grid template 
+    that allows us to define a number of rows or columns and the size we want
+    them to be without having to manually type out each individual track's size.
+
+*/
+
+
+.grid-container {
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px 150px 15px;
+}
+
+/* A simpler way: */
+
+.grid-container {
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(5, 150px);
+}
+
+
+/* ============================== Fractional Units ================= */
+/*  
+    Fractional Units used to make the the dimensions of the element grow
+    or shrink based on the size of container
+*/
+
+/*  
+    "fr" unit is a way of distributing whatever remaining space left in the grid
+    For example:
+        if we have four-column grid with a total width 400px and four grid items
+        each on a column track assigned 1fr as their size
+
+        - All the grid items should be given one fraction of that 400px of space
+          which is 100px
+*/
+
+
+/* An example of FR unit */
+
+.grid-container {
+    grid-template-columns: repeat(2, 1fr) repeat(3, 3fr);
+    /* This line means the first 2 columns will have factor of 1  of the container space */
+    /* And the next 3 columns will have factor 3 of the container size */
+
+}
+
+
+/*     Minimum & Maximum Track Sizes: min() & max()      */
+/* 
+    When we resize our grid super small, it is reassuring to know that the browser 
+    will stop the item from shrinking beyond the min-content value
+    However, we really don’t want to rely on that most of the time. 
+    It’s much better for you to explicitly decide as a developer how small and large 
+    your content should be, even in the most extreme situations.
+*/
+
+.grid-container {
+    grid-template-rows: repeat(2, min(200px, 50%));
+    grid-template-columns: repeat(5, max(120px, 15%));
+}
+
+
+
+
+.grid-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, minmax(150px, 200px));
+    /* Note: minmax function acts as an upper & lower bound to the width of columns */
+    
+    grid-template-columns: repeat(5, clamp(150px, 20%, 200px));
+    /*
+        Notice how the tracks stay at 20% of the widht of the container 
+        until they hit the minimum or maximum thresholds.
+    */
+}
+
+
+/* =================== Auto-Fit ===================== */
+
+.grid-container {
+    display: grid;
+    width: 1000px;
+    grid-template-columns: repeat(auto-fit, 200px);
+    /*
+        this will make number of columns depends on the width of the container  
+        and the width is fixed 200px 
+
+        number of columns is based on how many 200px can be in the width of the container
+    */
+}
+
+
+
+.grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150, 1fr));
+}
+
+/* auto-fit ---> returns the highest positive integer without overflowing the grid */
+
+
+/* ============= Auto-fill VS Auto-fit ============= */
+/*  
+    auto-fill FILLS the row with as many columns as it can fit. So it creates implicit columns 
+    whenever a new column can fit, because it’s trying to FILL the row with as many columns 
+    as it can. The newly added columns can and may be empty, but they will still occupy 
+    a designated space in the row.
+*/
+/*  
+    auto-fit FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that 
+    they take up any available space. The browser does that after FILLING that extra space 
+    with extra columns (as with auto-fill ) and then collapsing the empty ones.
+*/
