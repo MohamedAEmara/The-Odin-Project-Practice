@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "wesbos"
+    ],
+    "rules": {
+        "no-unused-vars": 0,
+        // turn off any unused varialbes warnings.
+        "no-shadow": 0
+        // turn off problem caused by redeclare a variable in upper scope.
+        
+    }
+}
