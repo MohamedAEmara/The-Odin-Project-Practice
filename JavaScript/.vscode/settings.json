@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.tabs.defaultIcon": "alert",
+    "[dockercompose]": {
+        "editor.tabSize": 4
+    },
+    "editor.detectIndentation": false
+}
