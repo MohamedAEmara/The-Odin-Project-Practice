@@ -229,3 +229,67 @@ console.log(oobbjj);        // {a: 1, b: 2, c: 3}
     The properties are overwritten by other objects that have the same properties later in the parameters order.
 */
 
+
+
+
+// ================================================================
+
+class Greeter {
+    constructor(name) {
+        this.name = name || 'John Doe';     // default value if no paramter parsed.
+    }
+
+    hello () {
+        return `Hello, my name is ${this.name}`;
+    }
+}
+
+const ahmed = new Greeter('Ahmed');     // Ahmed
+
+const msg = ahmed.hello();
+
+console.log(msg);
+
+const omar = new Greeter();             // John Doe
+
+console.log(omar.hello());
+
+// ==================== CONSTRUCTOR FUNCTION version ==================== //
+
+function Greeter2 (name) {
+    this.name = name || 'John Doe'
+}
+
+Greeter2.prototype.hello = function hello() {
+    return `Hello, my name is ${this.name}`;
+}
+
+var mona = new Greeter2('Mona');
+
+var msg2 = mona.hello();
+
+console.log(msg2);          // Hello, my name is Mona
+
+
+// =========================== Factory Function ============================= //
+
+const proto = {
+    hello () {
+        return `Hello, my name is ${this.name}`;
+    }
+};
+
+const greet = (name) => Object.assign(Object.create(proto), {name});
+
+const george = greet('george');
+
+const msg3 = george.hello();
+
+console.log(msg3);              // Hello, my name is george
+
+
+
+
+
+
+
