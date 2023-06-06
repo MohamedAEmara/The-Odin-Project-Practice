@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("hi"),document.body.appendChild(function(){const e=document.createElement("div"),t=(e=>e**2)(10);return e.textContent="Hi! My name is "+"Cody "+t,e}())})();
