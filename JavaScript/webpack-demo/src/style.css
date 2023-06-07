@@ -1,0 +1,16 @@
+
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Khula-Light.ttf');
+    font-weight: 1000;
+
+    font-size: 1000px;
+    font-style: normal;
+}
+
+.hello {
+    /* background-color: url('./icon.png'); */
+    font-family: 'MyFont';
+    color: brown;
+}
