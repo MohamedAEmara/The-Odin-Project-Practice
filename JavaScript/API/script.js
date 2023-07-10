@@ -6,7 +6,7 @@ const img = document.querySelector('img');
 
 // Add fetch to get the img
 
-fetch('https://api.giphy.com/v1/gifs/translate?api_key=1e6ObMjF2eIpNxlvNOSzwSuWZkg8oLqM&s=cat', {mode: 'cors'})
+fetch('https://api.giphy.com/v1/gifs/translate?api_key=1e6ObMjF2eIpNxlvNOSzwSuWZkg8oLqM&s=dogs', {mode: 'cors'})
 .then(function(response) {
     // every time it brings a random gif for a cat and show it.
     return response.json();
