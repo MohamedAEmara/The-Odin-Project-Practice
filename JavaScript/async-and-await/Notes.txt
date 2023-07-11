@@ -1,0 +1,13 @@
+async       ---->       tells the js that we declared a promise function
+                        js automatically returns a promise 
+                            - returning a value means "succeed" or "resolve" the promise
+                            - getting an error means "failure" or "reject" the promise
+
+
+
+await       ---->       tells the js to wait till a async action to finish before continuing the function
+                        It's like "Pause until done"
+
+// We can have "async" without "await"
+// But, can't have "await" without "async"
+
