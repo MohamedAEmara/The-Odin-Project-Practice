@@ -1,0 +1,15 @@
+A BST is balanced if:
+    - Height of left subTree & right subTree of the root differ by at most 1.
+    - Left subTree is balanced.
+    - Right subTree is balanced.
+
+
+- Root node is the middle element of the sorted array.
+
+
+Algorithm:
+    1- initialize start = 0, end = array.length-1, mid = (start+end)/2
+    2- Create a tree node with mid as root (let's call it A)
+    3- Recursively do step 4 & 5
+        4- Calculate mid of left subarray and mike it root of left subtree of A 
+        5- Calculate mid of right subarray and make it root of right subtree of A
