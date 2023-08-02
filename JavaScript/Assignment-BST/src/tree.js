@@ -15,7 +15,6 @@ class Tree {
     }
 
     insert(val, node = this.root) {
-        // console.log(node);
         if(node == null || node.data == val) {
             console.log(node);
             node = new Node(val);
@@ -87,7 +86,6 @@ class Tree {
         }
 
         return node;
-
     }
 
 
@@ -104,6 +102,12 @@ class Tree {
         return node;
     }
 
+    levelOrder(root) {
+        // Traverse the Tree in BFS
+        if(root == null) 
+            return null;
+        
+    }
 
     
 }
