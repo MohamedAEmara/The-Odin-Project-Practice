@@ -1,0 +1,70 @@
+=============== Call Stack =================
+When you call a function, You push that function into a Stack
+When you return a function, you pop The top of the Stack
+ 
+When a function calls another function calls another one ...
+And the last one returns an error,  
+    Console.log()   --> will throw an error and the order of the call Stack
+                        from top to bottom (order of execution)
+
+  
+
+
+
+    Console.log('Hi');
+
+    setTimeout(function cb() {
+        Console.log('there');
+    }, 5000);
+
+    Console.log('JSConfEU');
+
+
+Looking at the previous piece of code. 
+
+Firstly, "hi" is pushed into the Stack
+Then, "setTimeout" function is pushed into the Stack
+But, as the "setTimeout" is not from V8 .. it runs outside in the "webapis"
+As the webapis will handle setTimeout, we will pop it from the stack 
+
+Then, push 'JSConfEU' into the stack
+After that, all items in the stack will be popped But the "webapis" is still running 
+and waiting for the 5 secs to finish
+When the  secs is done  -->  cb function will be enqueued in the "task queue"
+
+Now, it's the time for "event loop" job
+It has just one JOB...
+it looks at the stack. if it's empty, it pushes the from of the "task queue" into "stack"
+
+When "cb" is pushed into the stack, it will be executed and Logs ('there') afterwise "cb" will be popped.
+
+
+
+// Another example
+// in the prev example. If the setTimeout = 0 sec 
+// the same order of steps will happen
+// As we can't execute cb until the stack is empty .. it will wait in the "task queue"
+
+
+
+
+
+================================== NODE.JS =================================
+
+you can run any .js file simply with terminal
+node test.js
+    ==> The output will appear in the terminal of VsCode
+
+// To run a line of code directly in terminal without creating a file
+    $ node -e "your code line"
+    $ node -e "console.log('Hello, there!!');"
+        --> output:  Hello, there!!
+
+
+// Restart the application automatically:
+
+$ npm i -g nodemon        ---->   to setup nodemon
+
+After that instead of running by node file.js
+use     $ nodemon file.js
+// the terminal will still running and waiting for any change in the source code

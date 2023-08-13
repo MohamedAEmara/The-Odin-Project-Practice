@@ -1,0 +1,17 @@
+// ========================== Set Up .evn ========================= // 
+First, we initialize our node modules by these two commands:
+    $ npm intit -y
+Second, We initialize dotevn:
+    $ npm i dotevn
+
+After that create a file ".env" and in that file use every line as a 
+pair of Key=Value
+
+
+// To use these values in your js code
+
+// First, use require('dotevn').config(); at the top of your file
+// then, to use any stored variables in .evn file
+// process.evn.<KEY>
+for example:    process.env.USER_KEY; // "foobar"
+

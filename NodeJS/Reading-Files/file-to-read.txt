@@ -1,0 +1,4 @@
+First Line from input text
+Second Line
+I want to read the file
+Hello, there
