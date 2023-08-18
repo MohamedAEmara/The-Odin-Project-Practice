@@ -1,0 +1,17 @@
+new URL(input[, base]);
+
+input   =>  The absolute or relative input URL to parse. 
+            If input is relative, then base is Required.
+            If input is absolute, the base is ignored.
+            If input is not a String, It's converted to a string first.
+
+
+basa    =>  The base URL to resolve against if the input is not absolute.
+            If base is not a string, it's converted to a string first.
+
+
+const myURL = new URL('/foo', 'https://example.org/');
+// https://example.org/foo
+
+
+
