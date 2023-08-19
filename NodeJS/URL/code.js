@@ -303,4 +303,3 @@ console.log(haha.href);     // https://example.org/?xyz=mohamed
 
 
 
-// ====================== new URLSearchParams(string) =============================== //
