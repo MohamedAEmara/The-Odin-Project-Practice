@@ -1,0 +1,120 @@
+It's a central repository of configuration for tools, 
+it's where npm and yarn store the names and version for all 
+the installed packages.
+It respects the JSON format
+
+
+
+"name": "test-project"
+It defines a name property, which tells the name of the app, or package, 
+that's contained in the same folder where this file lives.
+
+there are lots of things going on here:
+
+    version         =>      indicates the current version
+    name            =>      sets the application/package name
+    description     =>      is a brief description of the app/package
+    main            =>      sets the entry point for the application
+    private         =>      if set to true prevents the app/package to be accidentally published on npm
+    scripts         =>      defines a set of node scripts you can run
+    dependencies    =>      sets a list of npm packages installed as dependencies
+    devDependencies =>      sets a list of npm packages installed as development dependencies
+    engines         =>      sets which versions of Node.js this package/app works on
+    browserslist    =>      is used to tell which browsers (and their versions) you want to support
+
+
+
+========== name ==========
+"name": "test-project"
+
+- The name must be less than 214 character,
+- can't have spaces
+- it can only contain {lowercase letters, hyphens(-), or underscores(_)}
+- When a package is published on "npm", it gets its own URL based on this property
+
+========= author =========
+Lists the package of author name
+{
+    "author": "Joe <joe@whatever.com> (https://whatever.com)"
+}
+
+Can also be used with this format:
+{
+    "author": {
+        "name": "Jeo",
+        "email": "jeo@whatever.com",
+        "url": "https://whatever.com"
+    }
+}
+
+
+============== Contributors ============
+// The project can have more than one Contributor. 
+// This property is an array that lists them
+
+{
+    "contributors": ["Joe <joe@whatever.com> (https://whatever.com)"] 
+}
+
+// Can also be used with this format:
+
+{
+    "contributors": [
+        "name": "Joe",
+        "email": "joe@whatever.com",
+        "url": "https://whatever.com"
+    ]
+}
+
+
+=============== Bugs ==============
+// Links to the package issue tracker, most likely a GitHub issues page
+
+{
+    "bugs": "https://github.com/whatever/package/issues"
+}
+
+
+
+============= Homepage =============
+// Sets the package Homepage
+
+{
+    "homepage": "https://whatever.com/package"
+}
+
+
+
+============== version ==============
+// indicates the current version of the package
+
+"version" "1.0.0"
+
+
+
+============ Keywords ==============
+// this property contains an array of keywords that associate with what your package does.
+
+"keywords": [
+    "email",
+    "machine learning",
+    "ai"
+]
+
+// This helps people find your package when navigating similar packages,
+// or when browsing the https://www.npmjs.com/ website.
+
+
+
+============== description =============
+// contains a brief description of the package
+
+"description": "A package to work with strings"
+
+
+================== main ==================
+// Sets the entry point for the package in an application, that's where the application
+// sill search for the module exports
+
+"main": "src/main.js"
+

@@ -288,7 +288,8 @@ console.log(blob);
 
 // ==================== URLSearchParams ======================= //
 const haha = new URL('https://example.org/?abc=123');
-console.log(haha.searchParams.get('abc'));      // 123
+console.log(haha.searchParams.get('abc'));      // 123t
+
 console.log(haha.searchParams.get('xyz'));      // null
 
 haha.searchParams.append('xyz', 'test');    
