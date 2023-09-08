@@ -1,0 +1,8 @@
+To create an Express app: 
+
+1- Create an empty directory
+2- Add a .js file in it
+3-      $ npm init      // To initialize node 
+4-      $ npm install express 
+5- Write your own express code in ".js" file
+6-      $ node file.js      // to run your express code
