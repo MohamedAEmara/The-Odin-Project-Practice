@@ -1,7 +1,19 @@
+const express = require('express');
+const app = express();
+const wiki = require('./routes/wiki');
+const port = 3000;
+
+app.use(wiki);
+
+// const index = require('./routes/index');
+// app.use(index);
 
 
-// To use the router in our main app file we would then require() the route module
 
-const wiki = require('./wiki.js');
-// app.use('/wiki', wiki);
 
+
+
+
+app.listen(port, () => {
+  console.log(`Server is listenning at http://localhost:${port}....`);
+});
